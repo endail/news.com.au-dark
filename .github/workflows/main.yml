@@ -25,7 +25,7 @@ jobs:
         run: mkdir -vp /tmp
 
       - name: Make build directory
-        run: mkdir build
+        run: mkdir -p build
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.2.2
