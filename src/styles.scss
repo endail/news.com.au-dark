@@ -23,3 +23,130 @@
 */
 @charset "utf-8";
 
+$darkColor: #000000;
+$textColor: $textColor;
+
+
+body {
+    background-color: $darkColor;  
+}
+
+#header-ads-container {
+    display: none !important;
+}
+
+#header,
+nav {
+    background-color: $darkColor !important;
+    margin-top: 0 !important;
+}
+
+#nav,
+#nav.fixed,
+#nav-level1:before,
+#search-input {
+    background: $darkColor !important;
+}
+
+#search-input {
+    color: $textColor !important;
+}
+
+#nav button,
+#nav button:after {
+    background: $darkColor !important;   
+}
+
+.nav-primary-nca-logo a {
+    filter: invert(1) !important;
+}
+
+#nav ul {
+    background-color: $darkColor;
+}
+
+#nav ul > li > a {
+    color: $textColor !important;   
+}
+
+#page {
+    background-color: $darkColor;
+}
+
+h2 {
+    background-color:$darkColor !important;
+}
+
+.story-block h4 a {
+    color: $textColor !important;
+}
+
+.story-block p {
+    color: $textColor !important;   
+}
+
+.group-content .item.ipos-1 h4,
+.video-block h4,
+.video-block h4 > a,
+.group-content .item > .module-video-block .module-header {
+    background: linear-gradient(to bottom,rgba(0,0,0,.0) 0,rgba(0,0,0,.95) 36%,rgba(0,0,0,.95) 53%, $darkColor 100%) !important;
+    color: $textColor !important;
+}
+
+.group-footer,
+.group-footer ul {
+    background-image: none !important;
+    background-color: $darkColor !important;
+}
+
+#content-fixedmenu .content-item {
+    background-color: $darkColor !important; 
+}
+
+.weather-widget a.heading-link,
+.weather-widget .temperature {
+    color: $textColor !important;
+}
+
+.summary-fader .fader-item .story-block {
+    background-color: red !important; 
+}
+
+.module.multi-promo,
+.module.multi-promo .module-content,
+.module.multi-promo .module-content .promo-inner .caption,
+.dailydeals-wrapper,
+.dailydeals-wrapper .module-header::before,
+.dailydeals-wrapper .module-header::after,
+.breaking-news-standard a,
+.more-links a,
+.most-popular-articles a,
+#module-more-in .lined-background,
+#module-more-in .module-content,
+#module-more-in .module-content h4,
+.module.most-popular li a {
+    background-image: none !important;
+    background-color: $darkColor !important;
+    color: $textColor !important;
+}
+
+
+
+/* story page */
+h1.heading {
+    color: $textColor !important;
+}
+
+h1.story-headline,
+.story-content > p,
+.intro,
+#story p.description {
+    color: $textColor !important;   
+}
+
+.footer-statements,
+.footer-statements p,
+.footer-content {
+    background-color: $darkColor !important;
+    color: $textColor !important;
+}

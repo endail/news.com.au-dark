@@ -1,12 +1,12 @@
-# Sass Userstyle-Template
+# news.com.au dark
 
-[![Build Status](https://github.com/USERNAME/REPO-NAME/workflows/WORKFLOW-NAME/badge.svg)](https://github.com/USERNAME/REPO-NAME/actions?query=workflow%3AWORKFLOW-NAME)
+[![Build Status](https://github.com/endail/news.com.au-dark/workflows/build/badge.svg)](https://github.com/endail/news.com.au-dark/actions?query=workflow%3Abuild)
 
-- INSERT DESCRIPTION HERE
+- Dark theme for [news.com.au](https://www.news.com.au)
 
 ![Screenshot](./screenshot.jpg)
 
 ## Install
 - Download a userstyle manager (eg. [Stylus](https://add0n.com/stylus.html))
-- Visit the [USERSCRIPT-NAME page on userstyles.org](LINK TO USERSTYLES.ORG)
+- Visit the [news.com.au- dark page on userstyles.org](https://userstyles.org/styles/148468/news-com-au-dark)
 - Click 'Install Style'
