@@ -8,5 +8,5 @@
 
 ## Install
 - Download a userstyle manager (eg. [Stylus](https://add0n.com/stylus.html))
-- Visit the [news.com.au- dark page on userstyles.org](https://userstyles.org/styles/148468/news-com-au-dark)
+- Visit the [news.com.au dark page on userstyles.org](https://userstyles.org/styles/148468/news-com-au-dark)
 - Click 'Install Style'
