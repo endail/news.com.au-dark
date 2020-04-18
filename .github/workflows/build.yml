@@ -1,0 +1,58 @@
+
+name: build
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/build.yml
+      - "src/**"
+      
+jobs:
+  build_css:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source Git branch
+        uses: actions/checkout@v2
+        with:
+            ref: master
+            fetch-depth: 10
+            submodules: true
+
+      - name: Ensure dirs exist
+        run: mkdir -vp /tmp; mkdir -vp ./build
+
+      - name: Compile SCSS to expanded CSS
+        uses: gha-utilities/sass-build@v0.2.2
+        with:
+          source: ./src/userstyle.scss
+          destination: /tmp/news.com.au-dark.expanded.css
+          outputStyle: expanded
+
+      - name: Compile SCSS to compressed CSS
+        uses: gha-utilities/sass-build@v0.2.2
+        with:
+          source: ./src/userstyle.scss
+          destination: /tmp/news.com.au-dark.compressed.css
+          outputStyle: compressed
+
+      - name: Create expanded UserCSS
+        run: cat ./src/header.user.css /tmp/news.com.au-dark.expanded.css > ./build/news.com.au-dark.expanded.user.css
+
+      - name: Create compressed UserCSS
+        run: cat ./src/header.user.css /tmp/news.com.au-dark.compressed.css > ./build/news.com.au-dark.user.css
+
+      - name: Add and Commit changes
+        run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          git add ./build/*
+          git diff-index --quiet HEAD || git commit -m 'userstyle updated'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
